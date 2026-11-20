@@ -88,14 +88,14 @@ T() {
     en:uninstall) echo "Uninstalling mods...\nDo not remove USB drive." ;;
     en:done)      echo "Installation complete!\nYou can remove the USB drive.\nRebooting in 5 seconds..." ;;
     en:cancelled) echo "Cancelled.\nNothing was changed.\nYou can remove the USB drive." ;;
-    fr:sum_i)     echo "Installation terminee !\nVous pouvez retirer la cle.\n\nSi ce pack vous est utile :\ngithub.com/VOTRE-PSEUDO" ;;
-    fr:sum_u)     echo "Desinstallation terminee !\nVous pouvez retirer la cle.\n\nSi ce pack vous est utile :\ngithub.com/VOTRE-PSEUDO" ;;
+    fr:sum_i)     echo "Installation terminee !\nVous pouvez retirer la cle.\n\nSi ce pack vous est utile :\nko-fi.com/fuxio11" ;;
+    fr:sum_u)     echo "Desinstallation terminee !\nVous pouvez retirer la cle.\n\nSi ce pack vous est utile :\nko-fi.com/fuxio11" ;;
     fr:reboot30)  echo "\nRedemarrage automatique dans 30 s.\nAppuyez sur Redemarrer pour le faire maintenant." ;;
-    de:sum_i)     echo "Installation abgeschlossen!\nUSB-Stick kann entfernt werden.\n\nNuetzlich? Unterstuetzen:\ngithub.com/VOTRE-PSEUDO" ;;
-    de:sum_u)     echo "Deinstallation abgeschlossen!\nUSB-Stick kann entfernt werden.\n\nNuetzlich? Unterstuetzen:\ngithub.com/VOTRE-PSEUDO" ;;
+    de:sum_i)     echo "Installation abgeschlossen!\nUSB-Stick kann entfernt werden.\n\nNuetzlich? Unterstuetzen:\nko-fi.com/fuxio11" ;;
+    de:sum_u)     echo "Deinstallation abgeschlossen!\nUSB-Stick kann entfernt werden.\n\nNuetzlich? Unterstuetzen:\nko-fi.com/fuxio11" ;;
     de:reboot30)  echo "\nAutomatischer Neustart in 30 s.\n'Neustart' druecken fuer sofortigen Neustart." ;;
-    en:sum_i)     echo "Installation complete!\nYou can remove the USB drive.\n\nIf this pack helped you:\ngithub.com/VOTRE-PSEUDO" ;;
-    en:sum_u)     echo "Uninstall complete!\nYou can remove the USB drive.\n\nIf this pack helped you:\ngithub.com/VOTRE-PSEUDO" ;;
+    en:sum_i)     echo "Installation complete!\nYou can remove the USB drive.\n\nIf this pack helped you:\nko-fi.com/fuxio11" ;;
+    en:sum_u)     echo "Uninstall complete!\nYou can remove the USB drive.\n\nIf this pack helped you:\nko-fi.com/fuxio11" ;;
     en:reboot30)  echo "\nAutomatic reboot in 30 s.\nPress Restart to reboot now." ;;
     fr:ttskip)    echo "\nATTENTION: TouchTune ignore — Common.js modifie par un autre outil." ;;
     de:ttskip)    echo "\nACHTUNG: TouchTune uebersprungen — Common.js von anderem Tool geaendert." ;;
@@ -144,22 +144,22 @@ Puede retirar la USB." ;;
 Puede retirar la USB.
 
 Si te sirvio:
-github.com/VOTRE-PSEUDO" ;;
+ko-fi.com/fuxio11" ;;
     zh:sum_i)     echo "安装完成。
 您可以移除 USB 驱动器。
 
 如果这个包对你有帮助：
-github.com/VOTRE-PSEUDO" ;;
+ko-fi.com/fuxio11" ;;
     es:sum_u)     echo "Desinstalacion terminada!
 Puede retirar la USB.
 
 Si te sirvio:
-github.com/VOTRE-PSEUDO" ;;
+ko-fi.com/fuxio11" ;;
     zh:sum_u)     echo "卸载完成。
 您可以移除 USB 驱动器。
 
 如果这个包对你有帮助：
-github.com/VOTRE-PSEUDO" ;;
+ko-fi.com/fuxio11" ;;
     es:reboot30)  echo "
 Reinicio automatico en 30 s.
 Pulse Reiniciar para reiniciar ahora." ;;

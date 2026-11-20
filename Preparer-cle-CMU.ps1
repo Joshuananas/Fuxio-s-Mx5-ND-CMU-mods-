@@ -32,7 +32,7 @@ $ImgDir = Join-Path $PSScriptRoot "images"
 # Your support link, shown at the bottom of the window and in the CMU
 # end-of-install message. Replace with your real page (GitHub Sponsors,
 # Ko-fi, PayPal...). Same placeholder is in USB_tout-en-un/run.sh.
-$TipUrl = "https://github.com/VOTRE-PSEUDO"
+$TipUrl = "https://ko-fi.com/fuxio11"
 
 # ---------- Translations ----------
 $script:lang = 'en'
@@ -607,7 +607,7 @@ $btnWrite.Add_Click({
         if (Test-Path $rsPath) {
             $tipHost = ($TipUrl -replace '^https?://','').TrimEnd('/')
             $rs = [System.IO.File]::ReadAllText($rsPath)
-            $rs = $rs -replace 'github\.com/VOTRE-PSEUDO', $tipHost
+            $rs = $rs -replace 'ko-fi\.com/fuxio11', $tipHost
             [System.IO.File]::WriteAllText($rsPath, $rs, (New-Object System.Text.UTF8Encoding $false))
         }
 

@@ -46,5 +46,18 @@ then
   restore_file "$F" && modlog "restored sm.conf from backup"
 fi
 
+# Remove the source-list filter block appended to systemApp.js.
+# Surgical: the file may carry module 05's disclaimer patch, and the shared
+# backup belongs to 05 — do NOT restore_file it here. The appended block runs
+# from its marker comment to end-of-file.
+JS=/jci/gui/apps/system/js/systemApp.js
+if grep -q '__aio9_srcfilter' "$JS" 2>/dev/null
+then
+  sed -i '/^\/\* __aio9_srcfilter:/,$d' "$JS"
+  grep -q '__aio9_srcfilter' "$JS" \
+    && modlog "WARN: source filter removal incomplete" \
+    || modlog "removed dead sources from source menu"
+fi
+
 sync
 modlog "done"

@@ -44,5 +44,44 @@ do
   modlog "disabled $svc"
 done
 
+# --- Remove the dead entries from the source-selection menu ---
+# Disabling the services stops the processes, but the menu entries are built
+# by systemApp._buildEntertainmentDataList in systemApp.js. Append a guarded
+# wrapper that filters the dead audioSourceIds out of the list.
+JS=/jci/gui/apps/system/js/systemApp.js
+if [ -f "$JS" ] && ! grep -q '__aio9_srcfilter' "$JS"
+then
+  bak_file "$JS"
+  cat >> "$JS" <<'EOF'
+
+/* __aio9_srcfilter: drop dead sources (Aha/Stitcher/Pandora/SiriusXM) from the
+ * entertainment source list. Wraps the stock list builder and filters
+ * dataList.items by appData.audioSourceId. Never selects a source. */
+(function () {
+    if (typeof systemApp === "undefined" || !systemApp.prototype) return;
+    if (systemApp.prototype.__aio9SrcFilterWrapped) return;
+    if (typeof systemApp.prototype._buildEntertainmentDataList !== "function") return;
+    systemApp.prototype.__aio9SrcFilterWrapped = true;
+    var dead = {AhaRadio:1, Stitcher:1, Pandora:1, XmAudio:1, SatRadio:1};
+    var buildDataList = systemApp.prototype._buildEntertainmentDataList;
+    systemApp.prototype._buildEntertainmentDataList = function () {
+        var dataList = buildDataList.apply(this, arguments);
+        if (!dataList || !dataList.items) return dataList;
+        var kept = [];
+        for (var i = 0; i < dataList.items.length; i++) {
+            var it = dataList.items[i];
+            if (!(it && it.appData && dead[it.appData.audioSourceId])) kept.push(it);
+        }
+        dataList.items = kept;
+        dataList.itemCount = kept.length;
+        return dataList;
+    };
+})();
+EOF
+  if grep -q '__aio9_srcfilter' "$JS"
+  then modlog "filtered dead sources from source menu"
+  else modlog "WARN: source menu patch failed"; restore_file "$JS"; fi
+fi
+
 sync
 modlog "done"
