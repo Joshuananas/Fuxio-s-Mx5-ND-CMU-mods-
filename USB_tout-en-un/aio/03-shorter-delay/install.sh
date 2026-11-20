@@ -1,0 +1,10 @@
+. "$(dirname "$0")/../_common.sh"
+F=/jci/gui/common/controls/List2/js/List2Ctrl.js
+modlog "install shorter delay"
+bak_file "$F"
+sed -i '/Shorter Delay Mod/d' "$F"
+sed -i 's/autoscrollTier1Timeout :                1500,/autoscrollTier1Timeout :                150,/g' "$F"
+sed -i 's/autoscrollTier2Timeout :                5000,/autoscrollTier2Timeout :                300,/g' "$F"
+sed -i 's/autoscrollTier1Interval :               500,/autoscrollTier1Interval :               200,/g' "$F"
+sed -i 's/autoscrollTier2Interval :               1000,/autoscrollTier2Interval :               300,/g' "$F"
+sed -i '/autoscrollTier2Interval :               300,/ a\        \/\/Shorter Delay Mod' "$F"

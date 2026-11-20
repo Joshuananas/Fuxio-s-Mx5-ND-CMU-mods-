@@ -1,0 +1,47 @@
+CLÉ TOUT-EN-UN — oem-aa-mod 0.10.0 + TouchTune 1.2.1
+====================================================
+
+Une seule installation applique :
+1. oem-aa-mod : DPI corrigé (ronds ronds), tactile dans Android Auto,
+   navigation HUD (GAL 1.6), audio basse latence, mute=pause...
+2. TouchTune : tactile actif en roulant dans l'interface Mazda.
+
+PRÉREQUIS
+- Firmware CMU : 74.00.324 (Paramètres → Système → À propos)
+- Clé USB ≤32 Go, FAT32, partition MBR (la clé SanDisk préparée convient)
+
+INSTALLATION
+- Copier TOUT ce dossier à la RACINE de la clé
+- Contact ON → écran d'accueil → insérer la clé → attendre ~60 s
+- Dialogue "All-in-one mods" → Install
+- L'enchaînement est automatique : oem-aa-mod puis TouchTune,
+  puis le CMU redémarre tout seul. Ne rien toucher pendant l'opération.
+
+DÉSINSTALLATION
+- Même clé → "Uninstall" → restaure les backups des deux mods.
+
+OPTIONS (resources/libpatch.conf, modifiable sur PC)
+- touch = true                tactile dans AA
+- hud = true / svcnavi        guidance HUD
+- use_protocol_v1_6 = true    protocole nav complet (manœuvres/voies)
+- aa_audio_low_latency = true correctif latence audio
+- mute_pauses_phone = true    mute = pause média
+- block_headunit_media_play = true
+- force_street_name = false   → true si nom de rue absent du HUD (EU)
+- bt_pairing_show_device_notification = false → true pour identifier
+  un dongle AA non reconnu
+- bt_pairing_bypass_all_devices = false → true si dongle inconnu
+
+LOGS
+- logs/install.log (oem-aa) et touchtune/touchtune.log sur la clé.
+
+AJOUTER D'AUTRES MODS PLUS TARD
+- Modifier resources/libpatch.conf pour les options oem-aa-mod
+- Ajouter d'autres modules dans un sous-dossier + un appel
+  "sh dossier/script.sh" dans run.sh avant la section TouchTune
+  (TouchTune doit rester en dernier car il reboot le CMU).
+
+SOURCES
+- https://github.com/VitaliyKurokhtin/oem-aa-mod (0.10.0)
+- https://github.com/Bijan-A/oem-aa-mod-installer
+- https://github.com/Miatafy/TouchTune (1.2.1)

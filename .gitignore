@@ -1,0 +1,11 @@
+# Local / generated files
+capture-out/
+fw_extract/
+sauvegarde_cle_USB_*/
+diskpart_cle.txt
+*.log
+zh_cache.json
+add_langs.py
+gen_zh*.py
+fix_*.py
+test_zh.txt

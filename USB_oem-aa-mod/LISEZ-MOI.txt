@@ -1,0 +1,40 @@
+oem-aa-mod 0.10.0 — Installation sur CMU Mazda
+============================================
+
+PRÉREQUIS
+- Firmware CMU : 74.00.324 (vérifier sur l'écran :
+  Paramètres → Système → À propos → Informations de version)
+- Clé USB de 32 Go maximum, formatée FAT32
+
+PRÉPARATION DE LA CLÉ
+- Copier TOUT le contenu de ce dossier à la RACINE de la clé USB
+  (run.sh, jci-autoupdate, le fichier .up, les .so, le dossier resources/)
+- Éjecter la clé proprement
+
+INSTALLATION DANS LA VOITURE
+- Contact/accessoires allumés, brancher la clé dans le port USB de la console
+- Attendre quelques secondes : une boîte de dialogue "oem-aa-mod" apparaît
+- Choisir "Install" — NE PAS retirer la clé pendant l'installation
+- Le CMU redémarre tout seul au bout de ~5 s, la clé peut être retirée
+
+OPTIONS ACTIVÉES DANS resources/libpatch.conf
+- touch = true              (tactile dans Android Auto)
+- hud = true                (guidance sur le HUD, hud_transport = svcnavi)
+- use_protocol_v1_6 = true  (protocole nav complet : manœuvres/voies/ETA)
+- aa_audio_low_latency = true   (CORRECTIF LATENCE AUDIO — activé)
+- mute_pauses_phone = true  (mute = pause média sur le téléphone)
+- block_headunit_media_play = true (AA ne relance pas la lecture tout seul)
+- force_street_name = false (laissé par défaut — à passer en true si le
+                           nom de rue n'apparaît pas sur le HUD en EU)
+
+DÉSINSTALLATION
+- Rebrancher la même clé, choisir "Uninstall" — tout est restauré
+  depuis les backups (.orig créés au premier install).
+
+LOGS
+- Un dossier logs/ est créé sur la clé (install.log / uninstall.log).
+
+SOURCE
+- https://github.com/VitaliyKurokhtin/oem-aa-mod (mod, v0.10.0)
+- https://github.com/Bijan-A/oem-aa-mod-installer (installer)
+- SHA256 vérifié le 18/11/2026 : e512b533...6f4e

@@ -1,0 +1,39 @@
+TouchTune
+Copyright (C) 2026 Miatafy
+Source: https://github.com/Miatafy/TouchTune
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version. See the LICENSE file for the full license text.
+
+------------------------------------------------------------------------------
+Attribution
+------------------------------------------------------------------------------
+
+TouchTune builds on prior open-source work by the Mazda Connect (MZD Connect /
+CMU) modding community:
+
+  * MZD-AIO-TI by Trevor G Martin, Copyright (C) 2017 Trevelopment
+    https://github.com/Trevelopment/MZD-AIO
+    Licensed under GPL-3.0-or-later. TouchTune's touch-while-driving behavior
+    derives from this source revision:
+    https://github.com/Trevelopment/MZD-AIO/blob/255fa84a0636c8b2ff5c88a90c0123ae7f37dc07/app/files/tweaks/01_touchscreen-i.txt
+
+  * The Custom Application SDK (CASDK) community influenced the terminology
+    used for Mazda custom applications and boot hooks. TouchTune incorporates
+    no CASDK code.
+
+Because portions of this work derive from GPL-3.0 community code, this
+repository is licensed GPL-3.0. If you redistribute or adapt it, keep this
+NOTICE and the attributions above intact.
+
+------------------------------------------------------------------------------
+Not included
+------------------------------------------------------------------------------
+
+TouchTune does not redistribute Mazda firmware images or a complete Mazda
+`Common.js`. The source includes the small strings and update metadata needed
+to identify and modify the supported file. No code, configuration, licensing
+data, vehicle-binding data, or assets from Miatafy's proprietary products are
+included. Target firmware is v74.00.324A.
