@@ -1,5 +1,5 @@
 # Converts CMU framebuffer dumps (.raw) from the capture USB to PNG + animated GIF.
-# Usage: plug the capture USB, run Convertir-captures.bat
+# Usage: plug the capture USB, run Convert-Captures.bat
 [CmdletBinding()]
 param(
     [string]$Drive,            # e.g. "D:" - auto-detected if omitted

@@ -1,6 +1,6 @@
 #!/bin/sh
 # Screen capture tool for Mazda CMU — dumps /dev/fb0 frames to the USB drive.
-# Convert the .raw frames to PNG/GIF on the PC with Convertir-captures.bat.
+# Convert the .raw frames to PNG/GIF on the PC with Convert-Captures.bat.
 
 hwclock --hctosys
 
@@ -36,9 +36,9 @@ EN_dur="Video duration?"; FR_dur="Duree de la video ?"; DE_dur="Video-Dauer?"
 EN_rec="Recording the screen for %s s.\nNavigate normally in the menus.\nDo NOT remove the USB drive."
 FR_rec="Enregistrement de l'ecran pendant %s s.\nNaviguez normalement dans les menus.\nNe retirez PAS la cle USB."
 DE_rec="Bildschirm wird %s s aufgezeichnet.\nNormal in den Menues navigieren.\nUSB-Stick NICHT entfernen."
-EN_done="Done! %s frame(s) saved to:\ncapture/ on the USB drive\n\nRemove the USB drive and run\nConvertir-captures.bat on the PC."
-FR_done="Termine ! %s image(s) dans :\ncapture/ sur la cle USB\n\nRetirez la cle et lancez\nConvertir-captures.bat sur le PC."
-DE_done="Fertig! %s Bild(er) gespeichert in:\ncapture/ auf dem USB-Stick\n\nStick entfernen und Convertir-captures.bat\nauf dem PC starten."
+EN_done="Done! %s frame(s) saved to:\ncapture/ on the USB drive\n\nRemove the USB drive and run\nConvert-Captures.bat on the PC."
+FR_done="Termine ! %s image(s) dans :\ncapture/ sur la cle USB\n\nRetirez la cle et lancez\nConvert-Captures.bat sur le PC."
+DE_done="Fertig! %s Bild(er) gespeichert in:\ncapture/ auf dem USB-Stick\n\nStick entfernen und Convert-Captures.bat\nauf dem PC starten."
 EN_saving="Saving photo..."; FR_saving="Enregistrement de la photo..."; DE_saving="Foto wird gespeichert..."
 EN_fb="ERROR: /dev/fb0 not readable."; FR_fb="ERREUR : /dev/fb0 illisible."; DE_fb="FEHLER: /dev/fb0 nicht lesbar."
 
@@ -60,7 +60,7 @@ ES_done="Terminado! %s imagen(es) en:
 capture/ en la USB
 
 Retira la USB y ejecuta
-Convertir-captures.bat en el PC."; ZH_done="完毕！ %s 帧保存到：捕获/USB 驱动器上。拔下 USB 驱动器并在 PC 上运行 Convertir-captures.bat。";
+Convert-Captures.bat en el PC."; ZH_done="完毕！ %s 帧保存到：捕获/USB 驱动器上。拔下 USB 驱动器并在 PC 上运行 Convert-Captures.bat。";
 ES_saving="Guardando foto..."; ZH_saving="正在保存照片...";
 ES_fb="ERROR: /dev/fb0 no legible."; ZH_fb="错误：/dev/fb0 不可读。";
 

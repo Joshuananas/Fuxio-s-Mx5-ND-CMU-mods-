@@ -44,7 +44,7 @@ English 🇬🇧 · Français 🇫🇷 · Deutsch 🇩🇪 · Español 🇪🇸 
 
 ### 1. Prepare the key (PC)
 
-Run **`Preparer-cle-CMU.bat`**, choose *installation key*, pick your USB drive (FAT32, MBR), tick the mods you want, pick the language, click **Write**.
+Run **`Prepare-CMU-USB.bat`**, choose *installation key*, pick your USB drive (FAT32, MBR), tick the mods you want, pick the language, click **Write**.
 
 ### 2. Install in the car
 
@@ -58,17 +58,17 @@ Same key → **Uninstall**. All backups are restored and every mod is reverted.
 
 ## Bonus: CMU screen-capture key
 
-A second package (`USB_capture-ecran/`) turns a spare USB stick into a **screen recorder**: it dumps the framebuffer while you navigate the menus, then `Convertir-captures.bat` on the PC converts the raw frames into PNGs and an **animated GIF** — perfect for previews and documentation.
+A second package (`USB_capture-ecran/`) turns a spare USB stick into a **screen recorder**: it dumps the framebuffer while you navigate the menus, then `Convert-Captures.bat` on the PC converts the raw frames into PNGs and an **animated GIF** — perfect for previews and documentation.
 
 ---
 
 ## Project layout
 
 ```
-Preparer-cle-CMU.bat/.ps1   PC GUI (WPF): prepares install or capture keys
+Prepare-CMU-USB.bat/.ps1   PC GUI (WPF): prepares install or capture keys
 USB_tout-en-un/             Install package (run.sh, aio/ modules, oem-aa-mod, touchtune)
 USB_capture-ecran/          Framebuffer capture package (capture.sh)
-Convertir-captures.bat/.ps1 Raw frames → PNG + animated GIF
+Convert-Captures.bat/.ps1 Raw frames → PNG + animated GIF
 images/                     Preview assets & flags for the GUI
 ```
 
